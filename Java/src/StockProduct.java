@@ -7,7 +7,7 @@ public class StockProduct {
 	{
 		Product[] pd = new Product[4];
 		Scanner sc = new Scanner(System.in);
-		DecimalFormat dm = new DecimalFormat("#.##");
+		DecimalFormat dm = new DecimalFormat("#,###.00");
 		
 		for(int i=0;i<pd.length;i++) {
 			pd[i] = new  Product();
@@ -23,7 +23,7 @@ public class StockProduct {
 			pd[i].setPrice(sc.nextDouble());
 			while (!(pd[i].getPrice()>0)) {
 				System.out.print("Input product Unit  : ");
-				pd[i].setUnit(sc.nextInt());
+				pd[i].setPrice(sc.nextInt());
 			}
 			
 			System.out.println();
@@ -37,10 +37,7 @@ public class StockProduct {
 			totalPrice += _pd.calculate();
 		}
 		System.out.println("---------------------------------------------------------");
-		
-		for(Product _pd2:pd) {
-			totalPrice += _pd2.calculate();
-		}
+				
 		System.out.println("Total price of all product is "+dm.format(totalPrice)+" baht.");
 
 	}
