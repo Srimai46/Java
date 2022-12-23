@@ -22,7 +22,7 @@ public class StockProduct {
 			System.out.print("Input product Price : ");
 			pd[i].setPrice(sc.nextDouble());
 			while (!(pd[i].getPrice()>0)) {
-				System.out.print("Input product Unit  : ");
+				System.out.print("Input product Price  : ");
 				pd[i].setPrice(sc.nextInt());
 			}
 			
